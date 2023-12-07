@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main_style.css">
+    <script src="../js/headFixed.js"></script>
+    <script src="../js/home.js"></script>
+    <title>动漫网</title>
+</head>
+<body class="bg flex-col" οnlοad="openwin()" onscroll="navScroll()">
+    <header class="box"id="header">
+        <nav class="flex-row" id="navTag">
+            <img class="logo"src="../img/R-C.gif" alt="" width="100" height="auto"/>
+            <ul class="nav" >
+                <li><a class="current-page" href="../web/index.html">首页</a></li>
+                <li><a href="../web/news.html">热门更新</a></li>
+                <li><a href="../web/knowledge.html">最新上架</a></li>
+                <li><a href="../web/media.html">动漫相关</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">
+        <section class="home">
+            <div class="home-slogan">
+                <h2>少年战斗着——</h2>
+                <h2>「为寻求正确的死亡」</h2>
+            </div>
+            <div >
+                <img class="home-poster"src="../img/s.webp" alt="" width="70" height="auto">
+            </div>
+        </section>
+        <section class="newcase card">
+            <div class="newcase-tab flex-row">
+                <h6 class="newcase-tab-item" onclick="ChangeTab(this)" style="background:rgb(255,255,255)">国漫</h6>
+                <h6 class="newcase-tab-item" onclick="ChangeTab(this)">日漫</h6>
+            </div>
+            <div class="newcase-content flex-col">
+                <ul class="flex-row">
+                    <li class="newcase-content-item flex-col">
+                        
+                        <img class="data confirm" src="../img/a.webp" alt=""width="100" height="auto">
+                    </li>
+                    <li class="newcase-content-item flex-col">
+                        
+                        <img class="data curr-confirm" src="../img/f.webp" alt=""width="100" height="auto">
+                    </li>
+                    <li class="newcase-content-item flex-col">
+                        
+                        <img class="data cure" src="../img/h.webp" alt=""width="100" height="auto">
+                    </li>
+                    <li class="newcase-content-item flex-col">
+                        
+                        <img class="data dead" src="../img/w.webp" alt=""width="100" height="auto">
+                    </li>
+                </ul>
+            </div>
+            <div class="more" >
+                <span onclick="window.open('../web/knowledge.html')">更多信息</span>
+            </div>
+        </section>
+        <section class="card">
+            <h6 class="nav-title">高评分番剧</h6>
+            <div class="news flex-row">
+                <div class="news-item flex-col">
+                    <div class="news-time">B站评分：9.7</div>
+                    <div class="news-content">
+                        <div id = "newsTitle0"class="item-title">时光代理人</div>
+                        <div class="news-content-intro">
+                            <img class="news-content-img4" src="../img/m.webp" alt=""width="100" height="auto">
+                            <p>为了找到一系列罪案的操纵者，程小时求助于肖力，找寻一切藏匿于暗中的蛛丝马迹。但是拥有未知超能力的凶手在阴影之中，也从没有停止过阴谋的脚步。神秘能力者如影随形，身边伙伴接连遇害，程小时屡次身陷险境。随着...</p>
+                        <span class="btn-more" onclick="PopNews(this)">更多</span>
+                    </div>
+                </div>
+                <div class="news-item flex-col">
+                    <div class="news-time">B站评分：9.7</div>
+                    <div class="news-content">
+                        <div id = "newsTitle1"class="item-title">镇魂街 第三季</div>
+                        <div class="news-content-intro">
+                            <img class="news-content-img4" src="../img/n.webp" alt=""width="100" height="auto">
+                            <p>该季讲述了，拥有“武神躯”的少年镇魂将——曹焱兵为寻父母下落，与少女夏铃、北落师门等队友，闯入灵域禁地芦花古楼，并与守卫者“风花雪月”四王展开激烈交锋的冒险故事。
+                            </p>
+                        </div>
+                        <span class="btn-more" onclick="PopNews(this)">更多</span>
+                    </div>
+                </div>
+                <div class="news-item flex-col">
+                    <div class="news-time">B站评分：9.4</div>
+                    <div class="news-content">
+                        <div id = "newsTitle2"class="item-title">三十六骑 </div>
+                        <div class="news-content-intro">
+                            <img class="news-content-img4" src="../img/x.webp" alt=""width="100" height="auto">
+                            <p>汉明帝时期，班超、班昭兄妹因为兄长替父顶罪的事情前往洛阳。在那里，班超智救兄长、大闹游冶台，最终接受汉明帝青铜燕符准备出使西域。班超网罗能人异士组建西行团队，并且随窦固大军展开伊吾城之战。随后，三十六骑与窦固大军在伊吾分离，汉军主力向北攻城破寨，三十六骑向南伐交伐谋......</p>
+                        </div>
+                        <span class="btn-more" onclick="PopNews(this)">更多</span>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <span onclick="window.open('../web/news.html')">更多资讯</span>
+            </div>
+        </section>
+        <section class="card">
+            <h6 class="nav-title">国产动漫索引</h6>
+            <ul class="know flex-row">
+                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
+                    <div class="know-pic" style="background-image: url(../img/hu.webp);"></div>
+                    <span class="item-title">狐妖小红娘</span>
+                </li>
+                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
+                    <div class="know-pic" style="background-image: url(../img/xian.webp);"></div>
+                    <span class="item-title">仙王的日常生活 第四季</span>
+                </li>
+                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
+                    <div class="know-pic" style="background-image: url(../img/tian.webp);"></div>
+                    <span class="item-title">天官赐福</span>
+                </li>
+                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
+                    <div class="know-pic" style="background-image: url(../img/wu.webp);"></div>
+                    <span class="item-title">雾山五行</span>
+                </li>
+            </ul>
+            <div class="more" >
+                <span onclick="window.open('../web/knowledge.html')">更多</span>
+            </div>
+        </section>
+    </div>
+<div id="popWin"class="mask">
+    <div class="news-win">
+        <div class="win-canncel">
+            <span onclick="WinOut()">x</span>
+        </div>
+        <div class="win-content">
+            <h6 id = "winTitle"class="item-title"></h6>
+            <p id="winContent"></p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main_style.css">
+    <link rel="stylesheet" href="../style/news_style.css">
+    <script src="../js/headFixed.js"></script>
+    <script src="../js/news.js"></script>
+    <title>动漫网</title>
+</head>
+<body class="bg" onload="initData()"onscroll="navScroll()">
+    <header class="box"id="header">
+        <nav class="flex-row" id="navTag">
+            <img class="logo"src="../img/R-C.gif" alt="">
+            <ul class="nav" >
+                <li><a href="../web/index.html">首页</a></li>
+                <li><a class="current-page" href="../web/news.html">热门更新</a></li>
+                <li><a href="../web/knowledge.html">最新上架</a></li>
+                <li><a href="../web/media.html">动漫相关</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box flex-col">
+        <img class="banner" src="../img/n.jpg">
+        <div class="newsbody flex-row">
+            <div class="col-bar">
+                <div class="bar-title"><h5>更新内容</h5></div>
+                <div>
+                    <h6 class="bar-item" onclick="classifyNews(this)" style="color: #153458;font-weight: bold;">今日热点</h6>
+                    <h6 class="bar-item" onclick="classifyNews(this)">国漫更新</h6>
+                    <h6 class="bar-item" onclick="classifyNews(this)">日漫更新</h6>
+                </div>
+            </div>
+            <div class="data-list flex-col">
+                <div id ="newsList">
+                    <hr>
+                    <div class="list-item">
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="page-change">
+            <span  class ="page-item"id = "last-page">上一页</span>
+            <span  class ="page-item"pageNum="0" >1</span>
+            <span  class ="page-item"pageNum="1">2</span>
+            <span  class ="page-item"pageNum="2">3</span>
+            <span  class ="page-item"pageNum="3">4</span>
+            <span class ="page-item"id = "next-page">下一页</span>
+        </div>
+    </div>
+    <footer>
+        <div></div>
+    </footer>
+</body>
+</html>
