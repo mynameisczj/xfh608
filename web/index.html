@@ -3,141 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/main_style.css">
-    <script src="../js/headFixed.js"></script>
-    <script src="../js/home.js"></script>
-    <title>动漫网</title>
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/jQuery3.4.1.js" ></script>
+
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
 </head>
-<body class="bg flex-col" οnlοad="openwin()" onscroll="navScroll()">
-    <header class="box"id="header">
-        <nav class="flex-row" id="navTag">
-            <img class="logo"src="../img/R-C.gif" alt="" width="100" height="auto"/>
-            <ul class="nav" >
-                <li><a class="current-page" href="../web/index.html">首页</a></li>
-                <li><a href="../web/news.html">热门更新</a></li>
-                <li><a href="../web/knowledge.html">最新上架</a></li>
-                <li><a href="../web/media.html">动漫相关</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="box">
-        <section class="home">
-            <div class="home-slogan">
-                <h2>少年战斗着——</h2>
-                <h2>「为寻求正确的死亡」</h2>
+<body>
+    <div class="head">
+        <div class="topbar">
+            <div class="wrapper">
+            <div class="search fr">
+                <input type="text" name="" id="">
+                <input type="button" value="搜索" class="inbtn">
             </div>
-            <div >
-                <img class="home-poster"src="../img/s.webp" alt="" width="70" height="auto">
-            </div>
-        </section>
-        <section class="newcase card">
-            <div class="newcase-tab flex-row">
-                <h6 class="newcase-tab-item" onclick="ChangeTab(this)" style="background:rgb(255,255,255)">国漫</h6>
-                <h6 class="newcase-tab-item" onclick="ChangeTab(this)">日漫</h6>
-            </div>
-            <div class="newcase-content flex-col">
-                <ul class="flex-row">
-                    <li class="newcase-content-item flex-col">
-                        
-                        <img class="data confirm" src="../img/a.webp" alt=""width="100" height="auto">
-                    </li>
-                    <li class="newcase-content-item flex-col">
-                        
-                        <img class="data curr-confirm" src="../img/f.webp" alt=""width="100" height="auto">
-                    </li>
-                    <li class="newcase-content-item flex-col">
-                        
-                        <img class="data cure" src="../img/h.webp" alt=""width="100" height="auto">
-                    </li>
-                    <li class="newcase-content-item flex-col">
-                        
-                        <img class="data dead" src="../img/w.webp" alt=""width="100" height="auto">
-                    </li>
+            <div class="bar fr">
+                <ul>
+                    <li><a href="#">信息门户</a></li>
+                     <li><a href="#">网站地图</a></li>
+                     <li><a href="#">E-campus</a></li>
+                     <li><a href="#">OA</a></li>
+                     <li><a href="#">VPN</a></li>
+                     <li><a href="#">Email</a></li>
+                     <li><a href="#">English</a></li>
                 </ul>
             </div>
-            <div class="more" >
-                <span onclick="window.open('../web/knowledge.html')">更多信息</span>
-            </div>
-        </section>
-        <section class="card">
-            <h6 class="nav-title">高评分番剧</h6>
-            <div class="news flex-row">
-                <div class="news-item flex-col">
-                    <div class="news-time">B站评分：9.7</div>
-                    <div class="news-content">
-                        <div id = "newsTitle0"class="item-title">时光代理人</div>
-                        <div class="news-content-intro">
-                            <img class="news-content-img4" src="../img/m.webp" alt=""width="100" height="auto">
-                            <p>为了找到一系列罪案的操纵者，程小时求助于肖力，找寻一切藏匿于暗中的蛛丝马迹。但是拥有未知超能力的凶手在阴影之中，也从没有停止过阴谋的脚步。神秘能力者如影随形，身边伙伴接连遇害，程小时屡次身陷险境。随着...</p>
-                        <span class="btn-more" onclick="PopNews(this)">更多</span>
-                    </div>
-                </div>
-                <div class="news-item flex-col">
-                    <div class="news-time">B站评分：9.7</div>
-                    <div class="news-content">
-                        <div id = "newsTitle1"class="item-title">镇魂街 第三季</div>
-                        <div class="news-content-intro">
-                            <img class="news-content-img4" src="../img/n.webp" alt=""width="100" height="auto">
-                            <p>该季讲述了，拥有“武神躯”的少年镇魂将——曹焱兵为寻父母下落，与少女夏铃、北落师门等队友，闯入灵域禁地芦花古楼，并与守卫者“风花雪月”四王展开激烈交锋的冒险故事。
-                            </p>
-                        </div>
-                        <span class="btn-more" onclick="PopNews(this)">更多</span>
-                    </div>
-                </div>
-                <div class="news-item flex-col">
-                    <div class="news-time">B站评分：9.4</div>
-                    <div class="news-content">
-                        <div id = "newsTitle2"class="item-title">三十六骑 </div>
-                        <div class="news-content-intro">
-                            <img class="news-content-img4" src="../img/x.webp" alt=""width="100" height="auto">
-                            <p>汉明帝时期，班超、班昭兄妹因为兄长替父顶罪的事情前往洛阳。在那里，班超智救兄长、大闹游冶台，最终接受汉明帝青铜燕符准备出使西域。班超网罗能人异士组建西行团队，并且随窦固大军展开伊吾城之战。随后，三十六骑与窦固大军在伊吾分离，汉军主力向北攻城破寨，三十六骑向南伐交伐谋......</p>
-                        </div>
-                        <span class="btn-more" onclick="PopNews(this)">更多</span>
-                    </div>
-                </div>
-            </div>
-            <div class="more">
-                <span onclick="window.open('../web/news.html')">更多资讯</span>
-            </div>
-        </section>
-        <section class="card">
-            <h6 class="nav-title">国产动漫索引</h6>
-            <ul class="know flex-row">
-                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
-                    <div class="know-pic" style="background-image: url(../img/hu.webp);"></div>
-                    <span class="item-title">狐妖小红娘</span>
-                </li>
-                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
-                    <div class="know-pic" style="background-image: url(../img/xian.webp);"></div>
-                    <span class="item-title">仙王的日常生活 第四季</span>
-                </li>
-                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
-                    <div class="know-pic" style="background-image: url(../img/tian.webp);"></div>
-                    <span class="item-title">天官赐福</span>
-                </li>
-                <li onclick="window.open('../web/knowledge.html')" class="news-item flex-col">
-                    <div class="know-pic" style="background-image: url(../img/wu.webp);"></div>
-                    <span class="item-title">雾山五行</span>
-                </li>
-            </ul>
-            <div class="more" >
-                <span onclick="window.open('../web/knowledge.html')">更多</span>
-            </div>
-        </section>
-    </div>
-<div id="popWin"class="mask">
-    <div class="news-win">
-        <div class="win-canncel">
-            <span onclick="WinOut()">x</span>
         </div>
-        <div class="win-content">
-            <h6 id = "winTitle"class="item-title"></h6>
-            <p id="winContent"></p>
         </div>
+        <div class="logobar">
+            <div class="wrapper">
+                <div class="logo">
+                    <img src="../img/logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="wrapper">
+                <ul>
+                    <li><a href="login.html">登录页面</a></li>
+                    <li><a href="千与千寻.html">千与千寻</a></li>
+                    <li><a href="哈尔的移动城堡.html">哈尔的移动城堡</a></li>
+                    <li><a href="悬崖上的金鱼姬.html">悬崖上的金鱼姬</a></li>
+                    <li><a href="作者简介.html">作者简介</a></li>
+                    <li><a href="https://pandeng111.github.io/526/">宿舍主页</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        
+               
+                    
+                <div class="slide_shadow"></div> 
+                <div class="sy_hs"> 
+                </div> 
+            </div> 
+        </div>  
     </div>
-</div>
-<footer>
-    <div></div>
-</footer>
-</body>
-</html>
+    
+    <script>
+        window.onload=function(){  
+            var oUl=document.getElementById('topnav'); 
+            for(var i=0; i<oUl.childNodes.length; i++){  
+            childNode=oUl.childNodes[i];  
+                if(childNode.nodeName=='LI'){ 
+                    childNode.onmouseover=function(){this.className='show';}     
+                    childNode.onmouseout=function(){this.className='';}}     
+                }  
+                }
+    </script>     
+        <input type="text" id="txt1" style="position: fixed; right: 0;"/>
+        <div id="div1" class="iconfont icon-weixin">
+          
+        </div>
+
+<script>
+    window.οnscrοll=function(){
+    var oDiv1=document.getElementById('div1');
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    startMove((document.documentElement.clientHeight-oDiv1.offsetHeight)/2+scrollTop);
+    }
+    var timer=null;
+    function startMove(iTarget){
+    var oDiv1=document.getElementById('div1');
+    clearInterval(timer);
+    timer=setInterval(function(){
+    var speed=(iTarget-oDiv1.offsetTop)/8;
+    speed=speed>0?Math.ceil(speed):Math.floor(speed);
+    
+    if(oDiv1.offsetTop==iTarget){
+    clearInterval(timer);
+    }else{
+    var oTxt1=document.getElementById('txt1');
+    oTxt1.value=oDiv1.offsetTop;
+    oDiv1.style.top=oDiv1.offsetTop+speed+'px';
+    }
+    },30)
+    }
+    </script>
+
+     <div class="banner">
+
+        <div class="title wrapper">
+            <h4 class="fl">经典语录</h4>
+            
+        </div>
+        <div class="tent wrapper">
+            <div class="left fl">
+               <div id="content">
+                   <div id="imgdiv">
+                       <img src="../img/0e2603b42c9b397518a2ecb3492618843edef594.jpg" title=" "  id="img1" width="450px" height="180px">
+                   </div>
+                   <div id="thumbs">
+                       <a href="../img/sm1.png" title=" "><img src="../img/0e2603b42c9b397518a2ecb3492618843edef594.jpg"></a>
+                       <a href="../img/sm2.png" title=" "><img src="../img/t01b12459ac599a3708.jpg"></a>
+                       <a href="../img/sm3.png" title=" "><img src="../img/t014b7563345f4c0f3e.jpg"></a>
+                       <a href="../img/sm4.png" title=" "><img src="../img/t0102442ff6fd72b95d.jpg"></a>
+                   </div>
+               </div>
+                       </div>
+                       
+    <script>
+        $(function(){
+            $('#imgdiv').css({border:'soild 1px #ccc',padding:'5px',width:'550px'});
+            var tt=$('#img1').prop('title');
+            $('h2').append('<em></em>')
+            $('em').html(tt);
+            $('#thumbs').addClass('ys');
+            $("#thumbs a").click(function(){
+                var largepath=$(this).attr('href');
+                var largetitle=$(this).attr('title');
+                $('#imgdiv img').attr('src',largepath);
+                $('h2 em').html(largetitle);
+                return false;
+            })
+            
+        })
+    </script>
+            <div class="right fl">
+                <h2>宫崎骏动漫经典语录</h2>
+                <ul>
+                    <li><a href="#">1.不管前方的路有多苦，只要走的方向正确，不管多么崎岖不平，都比站在原地更接近幸福。</a></li>
+                    <li><a href="#">2.这世上有一条路无论如何也不能走，那就是歧途，只要走错一步结果都会是粉身碎骨。</a></li>
+                    <li><a href="#">3.有一天那个人走进了你的生命，你就会发现，真爱总是值得等待。</a></li>
+                    <li><a href="#">4.要好好珍惜自己的名字：记得自己是谁，便知道自己要做什么，要走什么样的路。</a></li>
+                    <li><a href="#">5.幸福是靠自己争取的，或许这个过程会很艰辛很艰难，但总比站在原地等待要好。</a></li>
+                    <li><a href="#">6.爱，不是寻找一个完美的人，而是学会用完美的眼光，欣赏那个并不完美的人。</a></li>
+                    <li><a href="#">7.被一个人深深地爱著将给你力量；深深地爱著一个人将给你勇气。</a></li>
+                    <li><a href="#">8.只有一个人在旅行时，才听得到自己的声音，它会告诉你，这世界比想象中的宽阔。</a></li>
+                    <li><a href="#">9.到不了的地方都叫做远方，回不去的世界都叫做家乡，我一直向往的却是比远方更远的地方。</a></li>
+                    <li><a href="#">10.当你无法再拥有时，你唯一能做的就是不要再忘记</a></li>
+                </ul>
+            </div>
+        </div>
+   
+        <div id="demo" class="top_box wrapper" style="overflow: hidden; width: 1200px; height: 264px">
+           <table width="100%" cellpadding="0" cellspacing="0">
+             <tr>
+               <td id="demo1"><table cellpadding="0" cellspacing="0">
+                 <tr>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see6.html" target="_blank"><img src="../img/sm4.png" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see6.html" target="_blank">千与千寻</a></div>
+                         </td>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see7.html" target="_blank"><img src="../img/t01010f1f29dfb8ca3d.jpg" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see7.html" target="_blank">哈尔的移动城堡</a></div>
+                         </td>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see8.html" target="_blank"><img src="../img/t0113fb5fb0c7c80030.jpg" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see8.html" target="_blank">悬崖上的金鱼姬</a></div>
+                         </td>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see9.html" target="_blank"><img src="../img/t0155c00339b96632b9.jpg" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see9.html" target="_blank">龙猫</a></div>
+                         </td>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see10.html" target="_blank"><img src="../img/t01b5bf13cc46cfadda.png" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see10.html" target="_blank">千与千寻</a></div>
+                         </td>
+                   <td width="191" height="200" style="padding-right:10px"><a href="../html/see/see11.html" target="_blank"><img src="../img/timg .jpg" style="width: 191px;height: 200px;border: 0;" /></a>
+                         <div class="tit"><a href="../html/see/see11.html" target="_blank">天空之城</a></div>
+                       </td>
+                 </tr>
+               </table></td>
+               <td id="demo2"></td>
+             </tr>
+           </table>
+         </div>
+        
+         <script type="text/javascript">
+           var speed=30;
+           demo2.innerHTML=demo1.innerHTML;
+           function Marquee(){
+               if(demo2.offsetWidth-demo.scrollLeft<=0)
+                   demo.scrollLeft-=demo1.offsetWidth;
+               else{
+                   demo.scrollLeft++;
+               }
+           }
+           var MyMar=setInterval(Marquee,speed)
+           demo.onmouseover=function(){
+               clearInterval(MyMar);
+           }
+           demo.onmouseout=function(){
+               MyMar=setInterval(Marquee,speed);
+           }
+           </script>
+                       </div>
+                   </div>
+
+     </div>
+     
+                <div class="main">
+
+                    <div class="footer">
+                        <div class="f1">
+                            <ul>
+                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#">收藏本站</a></li>
+                                <li><a href="#">信息反馈</a></li>
+                                <li><a href="../html/login.html">后台登录</a></li>
+                            </ul>
+                        </div>
+                        <div class="f2">
+                            ©宫崎骏动漫官网
+                        </div>
+                    </div>
+
+                </div>
+    </body>
+    </html>
+
